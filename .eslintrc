@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended", "preact", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {},
+  "settings": {
+    "jest": {
+      "version": 26
+    }
+  }
+}
