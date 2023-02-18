@@ -1,5 +1,6 @@
 import {useState} from 'preact/hooks';
 import './app.scss';
+import { Loader } from './shared/components/loader/loader';
 
 export function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ export function App() {
           count is {count}
         </button>
       </div>
+      <Loader />
     </>
   );
 }
