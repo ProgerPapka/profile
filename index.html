@@ -5,9 +5,70 @@
     <link rel="icon" type="image/svg+xml" href="/profile.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
+    <style>
+      html {
+        font-size: 16px;
+      }
+      body {
+        background-color: rgb(36, 36, 36);
+      }
+
+      /* loader */
+      #root-loader {
+        position: absolute;
+        top: calc(50% - 32px);
+        left: calc(50% - 32px);
+      }
+      .loader {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        position: relative;
+        animation: loaderRotate 1.5s linear infinite;
+      }
+      .loader::before {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        inset: 0px;
+        border-radius: 50%;
+        border: 3px solid #7996fc;
+        animation: loaderClip 2.25s linear infinite;
+      }
+      @keyframes loaderRotate {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes loaderClip {
+        0% {
+          clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+        }
+        25% {
+          clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+        }
+        50% {
+          clip-path: polygon(
+            50% 50%,
+            0 0,
+            100% 0,
+            100% 100%,
+            100% 100%,
+            100% 100%
+          );
+        }
+        75% {
+          clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+        }
+        100% {
+          clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <span id="root-loader" class="loader"></span>
   </body>
 </html>
