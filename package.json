@@ -16,6 +16,8 @@
     "stylelint:fix": "stylelint \"**/*.{,s}css\" --fix"
   },
   "dependencies": {
+    "clsx": "^1.2.1",
+    "normalize.css": "^8.0.1",
     "preact": "^10.11.3"
   },
   "devDependencies": {

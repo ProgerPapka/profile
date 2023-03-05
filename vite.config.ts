@@ -5,4 +5,9 @@ import preact from '@preact/preset-vite';
 export default defineConfig({
   plugins: [preact()],
   build: {},
+  css: {
+    modules: {
+      localsConvention: 'dashes',
+    },
+  },
 });

@@ -1,0 +1,18 @@
+.btn {
+  display: inline-block;
+}
+
+.btn:disabled,
+.btn[disabled],
+.btn-disabled {
+  color: #666666;
+
+  &:hover {
+    border: 1px solid transparent;
+  }
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #646cff;
+}

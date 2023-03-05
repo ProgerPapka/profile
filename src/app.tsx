@@ -1,6 +1,7 @@
 import {useState} from 'preact/hooks';
 import './app.scss';
-import { Loader } from './shared/components/loader/loader';
+import {Button} from './shared/components/button/button';
+import {Loader} from './shared/components/loader/loader';
 
 export function App() {
   const [count, setCount] = useState(0);
@@ -11,9 +12,9 @@ export function App() {
         <img src="/profile.png" class="logo" alt="My photo" />
       </div>
       <div class="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <Button onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
+        </Button>
       </div>
       <Loader />
     </>
