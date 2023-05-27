@@ -19,13 +19,9 @@ export function Button(props: ButtonProps) {
   const css = clsx(styles.btn, {
     [styles.btnDisabled]: disabled,
     [styles.btnPrimary]: apperence === 'primary',
-  })
+  });
   return (
-    <button
-      class={css}
-      disabled={disabled}
-      onClick={onClick}
-    >
+    <button class={css} disabled={disabled} onClick={onClick}>
       {children || name}
     </button>
   );

@@ -1,0 +1,39 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+
+  @media #{$desktop-lg-min} {
+    width: 69rem;
+  }
+
+  @media #{$desktop} {
+    width: 51.5rem;
+    padding: 0 3rem;
+  }
+
+  &.container-adaptive {
+    @media #{$desktop-lg-min} {
+      width: 69rem;
+    }
+
+    @media #{$desktop} {
+      width: 51.5rem;
+    }
+
+    @media #{$mobile} {
+      width: 100%;
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+  }
+
+  &_fullwidth {
+    width: auto;
+    padding: 0 1.5rem;
+
+    @media #{$mobile} {
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+  }
+}
