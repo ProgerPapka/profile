@@ -1,19 +1,59 @@
+$grid-columns: 12;
+
 .row {
   display: flex;
   flex-flow: row wrap;
 
   @media #{$mobile} {
-    margin-left: -4px;
-    margin-right: -4px;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
   }
 
   @media #{$tablet-interval} {
-    margin-left: -8px;
-    margin-right: -8px;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
   }
 
-  @media #{$desktop-min} {
-    margin-left: -16px;
-    margin-right: -16px;
+  @media #{$desktop-interval} {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  @media #{$desktop-lg} {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+}
+
+@mixin grid-item($columns: 1, $grid-gap: 1rem) {
+  flex: 0 0 calc(100% / $grid-columns * $columns);
+  padding-left: $grid-gap;
+  padding-right: $grid-gap;
+  box-sizing: border-box;
+}
+
+@for $i from 1 through $grid-columns {
+  @media #{$mobile} {
+    .col-xs-#{$i} {
+      @include grid-item($i, 0.5rem);
+    }
+  }
+
+  @media #{$tablet-interval} {
+    .col-sm-#{$i} {
+      @include grid-item($i, 0.5rem);
+    }
+  }
+
+  @media #{$desktop-interval} {
+    .col-md-#{$i} {
+      @include grid-item($i, 1rem);
+    }
+  }
+
+  @media #{$desktop-lg} {
+    .col-lg-#{$i} {
+      @include grid-item($i, 1.5rem);
+    }
   }
 }

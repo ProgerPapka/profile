@@ -1,10 +1,14 @@
-$mobile: 'screen and (max-width: 47.9625em)';
-$mobile-min: 'screen and (min-width: 22.5em)';
-$mobile-interval: '(min-width: 22.5em) and (max-width: 47.9625em)';
-$tablet: 'screen and (max-width: 63.9625em)';
-$tablet-min: 'screen and (min-width: 48em)';
-$tablet-interval: '(min-width: 48em) and (max-width: 63.9625em)';
-$desktop: 'screen and (max-width: 79.9625em)';
-$desktop-min: 'screen and (min-width: 64em)';
-$desktop-interval: '(min-width: 64em) and (max-width: 79.9625em)';
-$desktop-lg: 'screen and (min-width: 80em)';
+// 20rem = 320px
+// 48rem =  768px
+// 64rem = 1024px
+// 80 rem = 1280px
+$mobile: 'screen and (max-width: 47.9625rem)';
+$mobile-min: 'screen and (min-width: 20rem)';
+$mobile-interval: '(min-width: 20rem) and (max-width: 47.9625rem)';
+$tablet: 'screen and (max-width: 63.9625rem)';
+$tablet-min: 'screen and (min-width: 48rem)';
+$tablet-interval: '(min-width: 48rem) and (max-width: 63.9625rem)';
+$desktop: 'screen and (max-width: 79.9625rem)';
+$desktop-min: 'screen and (min-width: 64rem)';
+$desktop-interval: '(min-width: 64rem) and (max-width: 79.9625rem)';
+$desktop-lg: 'screen and (min-width: 80rem)';

@@ -1,23 +1,27 @@
+// .container: width 1104px on (screens >= 1280px) and 824px on (screens <= 1279px)
+// .container.container_adaptive: width =1104px on (screens >= 1280px); and =824px on (768px <= screens <= 1279px); =100% on screens <= 767px
+// .container_full-width: width =100% with 24px margins on (screens >= 768px) and 16px margins on (screens <= 767px)
 .container {
   margin-right: auto;
   margin-left: auto;
+  box-sizing: border-box;
 
-  @media #{$desktop-lg-min} {
-    width: 69rem;
+  @media #{$desktop-lg} {
+    width: 75rem;
   }
 
   @media #{$desktop} {
-    width: 51.5rem;
+    width: 58rem;
     padding: 0 3rem;
   }
 
-  &.container-adaptive {
-    @media #{$desktop-lg-min} {
-      width: 69rem;
+  &.container_adaptive {
+    @media #{$desktop-lg} {
+      width: 75rem;
     }
 
     @media #{$desktop} {
-      width: 51.5rem;
+      width: 58rem;
     }
 
     @media #{$mobile} {
@@ -27,7 +31,7 @@
     }
   }
 
-  &_fullwidth {
+  &_full-width {
     width: auto;
     padding: 0 1.5rem;
 
